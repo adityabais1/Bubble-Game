@@ -31,5 +31,5 @@ playnowBtn.addEventListener("mouseleave", function(){
 // Redirect page to game window.
 
 playnowBtn.addEventListener("click", function(){
-    window.location.href = "index.html"
+    window.location.href = "BubbleGame.html"
 })
