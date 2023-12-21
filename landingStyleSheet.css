@@ -57,14 +57,15 @@ body {
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
   transition: all 0.3s linear;
+  display: none;
 }
 
 .instructions {
   width: 30%;
   height: 100vh;
   overflow: scroll;
-  color: black;
-  background-color: rgb(220, 220, 220);
+  color: white;
+  background: linear-gradient(rgb(0, 10, 2) 20%,rgb(0, 0, 0)) ;
   padding: 30px;
   font-size: 14px;
 }
@@ -77,9 +78,13 @@ body {
 }
 .instructions h2{
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 20px;
     font-weight: 500;
+    color: rgb(236, 236, 236);
+    background: linear-gradient(rgb(0, 0, 52), black);
+    border-radius: 10px;
+    margin: 0 50px 15px;
 }
 .instructions h3{
     text-align: center;
@@ -87,16 +92,19 @@ body {
     font-weight: 500;
     padding-top: 20px;
     padding-bottom: 10px;
+    color: rgb(0, 72, 0);
 }
 h4{
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
+    color: rgb(107, 0, 0);
 }
 
 @media only screen and (max-width: 1280px) {
     .instructions {
         width: 100%;
+        height: fit-content;
         overflow: visible;
     }
     #main{

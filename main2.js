@@ -8,6 +8,13 @@ trackArea.addEventListener("mousemove", function(dets) {
     pointer.style.left = dets.x+"px";
 })
 
+trackArea.addEventListener("mouseenter", function(){
+    pointer.style.display = "block"
+})
+trackArea.addEventListener("mouseleave", function(){
+    pointer.style.display = "none"
+})
+
 
 
 playnowBtn.addEventListener("mouseenter", function(){
