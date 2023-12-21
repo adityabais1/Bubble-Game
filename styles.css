@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(0, 0, 69), black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#gameWindow{
+    height: 80%;
+    width: 80%;
+    background-color: rgba(187, 187, 187, 0.545);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.topPanel{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+.elem{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.box{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+}
+.bottomPanel{
+    height: calc(100% - 100px);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: scroll;
+}
+.bottomPanel::-webkit-scrollbar{
+    display: none;
+}
+.bubble{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgba(187, 187, 187, 0.545);
+    border: 1px solid rgba(255, 255, 255, 0.725);
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.bubble:hover{
+    background-color: rgba(255, 255, 255, 0.545);
+    cursor: pointer;
+}
+

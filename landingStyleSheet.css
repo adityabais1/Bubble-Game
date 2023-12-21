@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  cursor: default;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#main {
+  height: 100vh;
+  width: 70%;
+  background: linear-gradient(rgb(0, 0, 69), black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+.heading {
+  font-size: 72px;
+  font-weight: 600;
+}
+#playNow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 68%;
+  left: 50%;
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  /* background-color: green; */
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#playNow:hover {
+  background-color: rgb(0, 113, 0);
+  box-shadow: 0 0 20px rgba(0, 128, 0, 0.453);
+}
+
+.mouseTrack {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 19, 0.352);
+  border: 1px solid rgba(255, 255, 0, 0.723);
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.848);
+  border-radius: 100%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s linear;
+}
+
+.instructions {
+  width: 30%;
+  height: 100vh;
+  overflow: scroll;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  padding: 30px;
+  font-size: 14px;
+}
+.instructions::-webkit-scrollbar{
+    display: none;
+}
+
+.instructions p{
+    font-size: 14px;
+}
+.instructions h2{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.instructions h3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+h4{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1280px) {
+    .instructions {
+        width: 100%;
+        overflow: visible;
+    }
+    #main{
+        width: 100%;
+        height: 80vh;
+    }
+    body{
+        display: block;
+    }
+    #playNow {
+        top: 80%;
+    }
+}
+
