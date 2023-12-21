@@ -65,16 +65,16 @@ body {
   height: 100vh;
   overflow: scroll;
   color: white;
-  background: linear-gradient(rgb(0, 10, 2) 20%,rgb(0, 0, 0)) ;
+  background: linear-gradient(rgb(0, 0, 10) 20%,rgb(0, 0, 0)) ;
   padding: 30px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .instructions::-webkit-scrollbar{
     display: none;
 }
 
 .instructions p{
-    font-size: 14px;
+    font-size: 12px;
 }
 .instructions h2{
     text-align: center;
@@ -82,7 +82,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: rgb(236, 236, 236);
-    background: linear-gradient(rgb(0, 0, 52), black);
+    background: linear-gradient(rgb(0, 42, 52), black);
     border-radius: 10px;
     margin: 0 50px 15px;
 }
