@@ -40,3 +40,28 @@ playnowBtn.addEventListener("mouseleave", function(){
 playnowBtn.addEventListener("click", function(){
     window.location.href = "BubbleGame.html"
 })
+
+
+
+
+
+// code to make instructions visible.
+let menuBtn = document.getElementById("menuBtn");
+let instrPanel = document.getElementById("instructions");
+
+menuBtn.addEventListener("click", function(){
+    instrPanel.style.right = "0%"
+    menuBtn.style.display = "none";
+});
+
+
+
+
+// code again hide the instructionBar
+
+let closeBtn = document.getElementById("hidePanel");
+
+closeBtn.addEventListener("click", function(){
+    instrPanel.style.right = "-30%"
+    menuBtn.style.display = "block";
+});

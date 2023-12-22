@@ -7,13 +7,14 @@
 }
 body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
+  overflow: hidden;
 }
 
 #main {
   height: 100vh;
-  width: 70%;
+  width: 100%;
   background: linear-gradient(rgb(0, 0, 69), black);
   display: flex;
   justify-content: center;
@@ -23,6 +24,18 @@ body {
   overflow: hidden;
   color: white;
 }
+.header{
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  display: flex;justify-content: right;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 25px;
+}
+
 .heading {
   font-size: 72px;
   font-weight: 600;
@@ -68,6 +81,9 @@ body {
   background: linear-gradient(rgb(0, 0, 10) 20%,rgb(0, 0, 0)) ;
   padding: 30px;
   font-size: 12px;
+  position: absolute;
+  right: -30%;
+  transition: all 0.3s linear;
 }
 .instructions::-webkit-scrollbar{
     display: none;
@@ -101,21 +117,21 @@ h4{
     color: rgb(107, 0, 0);
 }
 
-@media only screen and (max-width: 1280px) {
-    .instructions {
-        width: 100%;
-        height: fit-content;
-        overflow: visible;
-    }
-    #main{
-        width: 100%;
-        height: 80vh;
-    }
-    body{
-        display: block;
-    }
-    #playNow {
-        top: 80%;
-    }
+#hidePanel{
+  position: absolute;
+  margin: 27px 15px;
+  left: 0px;
+  top: 0;
+  font-size: 30px;
+  border-radius: 100%;
+  padding: 10px;
+  transition: all 0.3s linear;
+}
+#hidePanel:hover{
+  border: 1px solid red; 
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.533);
 }
 
+@media only screen and (max-width: 1280px) {
+}

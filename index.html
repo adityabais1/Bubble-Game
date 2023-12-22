@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bubble Game</title>
     <link rel="stylesheet" href="landingStyleSheet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
   </head>
   <body>
     <div id="main">
       <div class="mouseTrack"></div>
+      <div class="header"><i  id="menuBtn" class="ri-menu-line"></i></div>
       <h1 class="heading">Bubble Game</h1>
       <div id="playNow">PLAY NOW</div>
     </div>
-    <div class="instructions">
+    <div class="instructions" id="instructions">
       <h2>Bubble Pop Challenge</h2>
       <p>
         Welcome to the Bubble Pop Challenge! Your goal is to hit as many bubbles
@@ -51,6 +53,7 @@
         Are you ready for the Bubble Pop Challenge? Click "Start" to begin the
         game and test your bubble-popping skills. Good luck.
       </p>
+      <i id="hidePanel" class="ri-arrow-right-double-line"></i>
       <div class="aboutDev"></div>
     </div>
     <script src="main2.js"></script>
