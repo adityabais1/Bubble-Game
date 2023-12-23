@@ -65,3 +65,16 @@ closeBtn.addEventListener("click", function(){
     instrPanel.style.right = "-30%"
     menuBtn.style.display = "block";
 });
+
+
+
+let linkedinBtn = document.getElementById("linkedinLogo");
+
+linkedinBtn.addEventListener("click", function(){
+    window.location.href = "https://www.linkedin.com/in/aditya-bais-singh/";
+})
+trackArea.addEventListener("click", function(){
+    instrPanel.style.right = "-30%"
+    menuBtn.style.display = "none";
+    menuBtn.style.display = "block";
+})

@@ -7,33 +7,74 @@
 }
 body {
   height: 100%;
+  width: 100%;
+}
+#window {
+  height: 100vh;
   width: 100vw;
-  display: flex;
   overflow: hidden;
+  position: relative;
+}
+#header {
+  height: 70px;
+  width: 100%;
+  background: linear-gradient(#317773, #1f5654);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: right;
+  padding: 0 20px;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+}
+#header i {
+  cursor: pointer;
 }
 
 #main {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(rgb(0, 0, 69), black);
+  background: linear-gradient(#e2d1f9, white);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  color: white;
+  color: rgb(33, 33, 33);
 }
-.header{
-  height: 80px;
-  width: 100%;
+
+.credit {
   position: absolute;
-  top: 0px;
-  display: flex;justify-content: right;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 25px;
+  bottom: 0;
+  width: 100%;
+  margin-top: 300px;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.creatorName {
+  font-size: 14px;
+}
+
+.line {
+  height: 20px;
+  width: 1px;
+  background-color: black;
+}
+#linkedinLogo {
+  font-size: 26px;
+  transition: all 0.2s linear;
+}
+#linkedinLogo:hover {
+  color: #0a66c2;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .heading {
@@ -43,14 +84,15 @@ body {
 #playNow {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 68%;
+  top: 67%;
   left: 50%;
   padding: 10px 20px;
   border: none;
   background-color: green;
+  color: white;
   /* background-color: green; */
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -78,46 +120,48 @@ body {
   height: 100vh;
   overflow: scroll;
   color: white;
-  background: linear-gradient(rgb(0, 0, 10) 20%,rgb(0, 0, 0)) ;
+  background: linear-gradient(rgb(0, 0, 10) 20%, rgb(0, 0, 0));
   padding: 30px;
   font-size: 12px;
   position: absolute;
+  top: 0px;
   right: -30%;
   transition: all 0.3s linear;
+  z-index: 10;
 }
-.instructions::-webkit-scrollbar{
-    display: none;
-}
-
-.instructions p{
-    font-size: 12px;
-}
-.instructions h2{
-    text-align: center;
-    padding: 10px 0;
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(236, 236, 236);
-    background: linear-gradient(rgb(0, 42, 52), black);
-    border-radius: 10px;
-    margin: 0 50px 15px;
-}
-.instructions h3{
-    text-align: center;
-    font-size: 17px;
-    font-weight: 500;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    color: rgb(0, 72, 0);
-}
-h4{
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(107, 0, 0);
+.instructions::-webkit-scrollbar {
+  display: none;
 }
 
-#hidePanel{
+.instructions p {
+  font-size: 12px;
+}
+.instructions h2 {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(236, 236, 236);
+  background: linear-gradient(rgb(0, 42, 52), black);
+  border-radius: 10px;
+  margin: 0 50px 15px;
+}
+.instructions h3 {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: rgb(0, 72, 0);
+}
+h4 {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(107, 0, 0);
+}
+
+#hidePanel {
   position: absolute;
   margin: 27px 15px;
   left: 0px;
@@ -126,9 +170,10 @@ h4{
   border-radius: 100%;
   padding: 10px;
   transition: all 0.3s linear;
+  border: 1px solid rgb(0, 0, 0);
 }
-#hidePanel:hover{
-  border: 1px solid red; 
+#hidePanel:hover {
+  border: 1px solid red;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.533);
 }
