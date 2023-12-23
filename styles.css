@@ -55,7 +55,7 @@ main{
 .bottomPanel{
     height: calc(100% - 100px);
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,3 +82,13 @@ main{
     cursor: pointer;
 }
 
+
+@media only screen and (max-width: 485px) { 
+    #gameWindow{
+        height: 80%;
+        width: 95%;
+        background-color: rgba(187, 187, 187, 0.545);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}

@@ -19,7 +19,7 @@ body {
   height: 70px;
   width: 100%;
   background: linear-gradient(#317773, #1f5654);
-  color: white;
+  color: rgb(228, 228, 228);
   font-size: 30px;
   display: flex;
   justify-content: right;
@@ -28,9 +28,13 @@ body {
   position: absolute;
   top: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+  z-index: 3;
 }
 #header i {
   cursor: pointer;
+}
+#header i:hover {
+  color: rgb(255, 255, 255);
 }
 
 #main {
@@ -57,6 +61,7 @@ body {
   align-items: center;
   gap: 20px;
   padding: 10px;
+  z-index: 4;
 }
 .creatorName {
   font-size: 14px;
@@ -78,8 +83,10 @@ body {
 }
 
 .heading {
-  font-size: 72px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 90px;
   font-weight: 600;
+  z-index: 1;
 }
 #playNow {
   position: absolute;
@@ -94,6 +101,7 @@ body {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  z-index: 4;
 }
 
 #playNow:hover {
@@ -113,6 +121,7 @@ body {
   transform: translate(-50%, -50%);
   transition: all 0.3s linear;
   display: none;
+  z-index: 2;
 }
 
 .instructions {
@@ -125,8 +134,8 @@ body {
   font-size: 12px;
   position: absolute;
   top: 0px;
-  right: -30%;
-  transition: all 0.3s linear;
+  right: -100%;
+  transition: all 0.4s linear;
   z-index: 10;
 }
 .instructions::-webkit-scrollbar {
@@ -175,8 +184,81 @@ h4 {
 #hidePanel:hover {
   border: 1px solid red;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.533);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.533);
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1000px) {
+  .instructions {
+    width: 50%;
+  }
+}
+
+/* background design */
+
+.curvePath1 {
+  height: 1400px;
+  width: 1400px;
+  /* background-color: pink; */
+  border-radius: 100%;
+  position: absolute;
+  z-index: 0;
+  bottom: 50%;
+  border: 2px solid pink;
+  transform: translate(0, 100%);
+}
+
+.ball1 , .ball2{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.ball1{
+  background-color: rgb(238, 82, 82);
+  border: 1px solid rgb(236, 17, 17);
+  animation: rotateInCircle 10s linear infinite;
+}
+.ball2{
+  background-color: rgb(212, 216, 87);
+  border: 1px solid rgb(213, 206, 10);
+  animation: rotateInCircle 12s linear infinite;
+}
+
+@keyframes rotateInCircle {
+  0% {
+    transform: translate(-50%, -50%) rotate(-30deg) translateX(700px) rotate(0deg);
+  }
+  50%{
+    transform: translate(-50%, -50%) rotate(-150deg) translateX(700px) rotate(-160deg);
+    
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-30deg) translateX(700px) rotate(0deg);
+  }
+}
+
+
+.curvePath2{
+  height: 100px;
+  width: 100vw;
+  border: 2px solid rgb(213, 213, 15);
+  border-top: none;
+  position: absolute;
+  top: 10vh;
+  border-end-end-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+
+
+@media only screen and (max-width: 527px){
+  #playNow {
+    top: 75%;
+  }
+
+  .instructions {
+    width: 85%;
+  }
 }
